@@ -1,0 +1,71 @@
+@mixin hover-prop() {
+    &:hover,
+    &:focus,
+    &:active {
+        @content;
+    }
+}
+
+@mixin panel() {
+    background-color: #fcfcfc;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-color: #cdd4e0;
+    box-shadow: 0 0 10px rgba(28, 39, 60, 0.1);
+}
+
+@mixin panelHeader() {
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-bottom: 2px solid $gray-500;
+}
+
+@mixin transition($value) {
+    transition: $value;
+    -webkit-transition: $value;
+    -moz-transition: $value;
+    -ms-transition: $value;
+    -o-transition: $value;
+}
+
+@mixin border-radius($value) {
+    border-radius: $value;
+    -webkit-border-radius: $value;
+    -moz-border-radius: $value;
+    -ms-border-radius: $value;
+    -o-border-radius: $value;
+}
+
+@mixin box-shadow($value) {
+    box-shadow: $value;
+}
+
+// TRANSFORM
+@mixin transform($value) {
+    transform: $value;
+    -webkit-transform: $value;
+    -moz-transform: $value;
+    -ms-transform: $value;
+    -o-transform: $value;
+}
+
+// ANIMATION
+@mixin animation($animationName, $duration, $timingFunction, $delay, $iterationCount) {
+    //animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation: #{$animationName} #{$duration} #{$timingFunction} #{$delay} #{$iterationCount};
+    -webkit-animation: #{$animationName} #{$duration} #{$timingFunction} #{$delay} #{$iterationCount};
+}
+
+@mixin scrollbar() {
+    &::-webkit-scrollbar-track {
+        // -webkit-box-shadow: inset 0 0 6px rgba($color: $primary, $alpha: 0.3);
+        background-color: #f5f5f5;
+    }
+    &::-webkit-scrollbar {
+        width: 6px;
+        background-color: #f5f5f5;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $primary;
+        border: none;
+    }
+}

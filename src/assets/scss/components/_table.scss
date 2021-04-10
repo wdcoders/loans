@@ -1,0 +1,73 @@
+// WD TABLE
+.table {
+    thead {
+        tr {
+            th {
+                padding: 0.8rem 0.5rem !important;
+                background: $gray-200;
+                border: 1px solid $gray-400 !important;
+                border-bottom: 3px solid $gray-400 !important;
+            }
+        }
+    }
+    tbody {
+        tr {
+            td {
+                border: 1px solid $gray-400 !important;
+            }
+        }
+    }
+}
+
+// WD TAB
+.mo-tab {
+    border-bottom: 2px solid $gray-500;
+
+    .nav-item {
+        .nav-link {
+            position: relative;
+            background: transparent;
+            @include border-radius(0);
+            color: $gray-500;
+            // border-bottom: 2px solid $gray-500;
+
+            &.active {
+                color: $primary;
+
+                &:after {
+                    content: "";
+                    width: 100%;
+                    height: 2px;
+                    background: $primary;
+                    display: block;
+                    position: absolute;
+                    bottom: -2px;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+.mo-tab-content {
+    @include panel();
+
+    .wd-tab-content-header {
+        background: #fff;
+        padding: 1rem 1.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include panelHeader();
+
+        h3 {
+            margin-bottom: 0;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+    }
+
+    .wd-tab-content-body {
+        padding: 1rem;
+    }
+}
