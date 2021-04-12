@@ -16,3 +16,4 @@ export const environment = {
         SEARCH_LOAN: 'search',
     }
 };
+
